@@ -1,0 +1,58 @@
+/* Estilos aquí del App */
+
+.tw-followCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.tw-followCard-header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tw-followCard-div {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.tw-followCard-strong {
+    font-size: 1rem;
+}
+
+.tw-followCard-span {
+    font-size: 0.8rem;
+    color: rgb(154, 154, 154);
+}
+
+.tw-followCard-img {
+    width: 4rem;
+    border-radius: 100%;
+}
+
+.tw-followCard-button {
+    background-color: white;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .3 ease;
+}
+
+.tw-followCard-button.isFollowing {
+    background-color: #222;
+    border: 2px solid white;
+    color: white;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: .3 ease;
+}
