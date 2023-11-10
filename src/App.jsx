@@ -18,7 +18,17 @@ export function App() {
 
         // las props (los atributos que le pasamos al componente son imutables --> No puedo llegar y hacer un userName = "@sidney")
         <section className='App'>
-            <TwitterFollowCard userName={"sxdny"} name={"Sidney Silva Braz de Oliveira"} ></TwitterFollowCard>
+            <TwitterFollowCard userName={"sxdny"} name={"Sidney Silva"} ></TwitterFollowCard>
+
+            <TwitterFollowCard userName={"unknownsergi"} name={"Sergi Camps"} ></TwitterFollowCard>
+
+            <TwitterFollowCard userName={"elonmusk"} name={"Elon Musk"} ></TwitterFollowCard>
+
+            <TwitterFollowCard userName={"MaxCandace"} name={"Máximo Candás"} ></TwitterFollowCard>
+
+            <TwitterFollowCard userName={"josegm120"} name={"Jose"} ></TwitterFollowCard>
+
+            <TwitterFollowCard userName={"torvalds"} name={"Linus Torvalds"} ></TwitterFollowCard>
 
             <TwitterFollowCard userName={"midudev"} name={"Miguel Ángel Durán"} ></TwitterFollowCard>
 
