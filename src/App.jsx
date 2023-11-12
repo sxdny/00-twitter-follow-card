@@ -1,6 +1,18 @@
 import './App.css';
 import { TwitterFollowCard } from './TwitterFollowCard';
 
+// lista de usuarios
+const users = [
+    {
+        "userName": 'midudev',
+        "name": 'Miguel Ángel Durán',
+        "isFollowing": false
+        /* uuid: nana --> Solo usarlo aquí si lo definimos aquí, no en otra parte
+        algo único no aleatorio --> id de la base de datos */
+    }
+    // .. un montón de usuarios
+];
+
 // Primer componente creade en React
 export function App() {
 
@@ -17,28 +29,32 @@ export function App() {
         // si le tenemos que pasar un false, le pasamos el isFollowing={false}
 
         // las props (los atributos que le pasamos al componente son imutables --> No puedo llegar y hacer un userName = "@sidney")
+
+        // el initiarIsFollowing es una buena practiva para nombrar props que ya estén establecidas
+
+        // para retornar cada elemento con la array de objetos
+        // React no deja de ser JavaScript
+
+        // usamos el userName porque es algo único. Tiene que ser algo único.
         <section className='App'>
-            <TwitterFollowCard userName={"sxdny"} name={"Sidney Silva"} ></TwitterFollowCard>
+            {
+                users.map(user => {
+                    {/* Para cada usuario extraemos esta info */}
+                    const { userName, name, isFollowing } = user
+                    return (
+                        <TwitterFollowCard
+                            key={userName}
+                            userName={userName}
+                            initialIsFollowing={isFollowing}
+                            name={name}
+                        >
+                            {/* Ponemos aquí algo si es como children, como el name */}
+                        </TwitterFollowCard>
+                    )
+                })
+            }
 
-            <TwitterFollowCard userName={"unknownsergi"} name={"Sergi Camps"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"elonmusk"} name={"Elon Musk"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"MaxCandace"} name={"Máximo Candás"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"josegm120"} name={"Jose"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"torvalds"} name={"Linus Torvalds"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"midudev"} name={"Miguel Ángel Durán"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"linux"} name={"Linux"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"apple"} name={"Apple Inc."} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"brasil"} name={"Brasil"} ></TwitterFollowCard>
-
-            <TwitterFollowCard userName={"sidney"} name={"Sidney"}  ></TwitterFollowCard>
+            { /* Comentario dentro del JSX */}
 
         </section>
     )
@@ -52,3 +68,7 @@ export function App() {
         Hola <-- children (todo lo que envuelve)
     </div>
 */
+
+// Renderizar lista de elementos
+
+// Cuando hacemos fetch de una API, nos llegará un array de elementos
