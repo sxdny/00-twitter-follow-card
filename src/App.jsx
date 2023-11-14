@@ -3,8 +3,8 @@ import { TwitterFollowCard } from './TwitterFollowCard';
 
 const users = [
     {
-        "userName": 'midudev',
-        "name": 'Miguel Ángel Durán',
+        "userName": 'sxdny',
+        "name": 'Sidney Silva Braz de Oliveira',
         "isFollowing": false
         /* uuid: nana --> Solo usarlo aquí si lo definimos aquí, no en otra parte
         algo único no aleatorio --> p.e id de la base de datos */
