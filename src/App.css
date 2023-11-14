@@ -61,14 +61,18 @@
     color: rgb(255, 35, 35);
     border: 2px solid rgb(255, 32, 32);
     background-color: rgba(179, 0, 0, 0.192);
+
+    transition: .3s ease;
 }
 
 .tw-followCard-button.isFollowing:hover .tw-followCard-stopFollow {
     display: block;
+
 }
 
 .tw-followCard-text {
     display: block;
+
 }
 
 .tw-followCard-button.isFollowing:hover .tw-followCard-text {
